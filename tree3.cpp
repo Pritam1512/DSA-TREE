@@ -1,5 +1,5 @@
 //Level Order traversal of tree
-
+//using queue data structure
 
 #include<bits/stdc++.h>
 using namespace std;
