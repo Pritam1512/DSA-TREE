@@ -7,7 +7,7 @@ using namespace std;
 //MIRROR OF THE TREE
 ////SUM OF TOTAL NODES
 //LEVEL ORDER TRAVERSAL
-
+///PRINT K DOWN ELEMENTS
 
 int sum = 0;
 int arr[10];
@@ -48,6 +48,19 @@ void createNode(int data)
         {
             p->left = t;
         }
+
+    }
+}
+void printKDown(struct node *temp,int k)
+{
+    if(temp == NULL || k < 0)
+        return;
+    if(k==0)
+        cout << temp->data <<" ";
+    else
+    {
+        printKDown(temp->left,k-1);
+        printKDown(temp->right,k-1);
 
     }
 }
